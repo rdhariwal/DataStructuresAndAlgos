@@ -22,4 +22,12 @@ class TestValidPalindrome:
         # s is an empty string "" after removing non-alphanumeric characters.
         # Since an empty string reads the same forward and backward, it is a palindrome.
         assert expected == result
+
+    def test_4_palindrome_string(self):
+        expected = False
+        s = "0p"
+        result = valid_plaindrome(s)
+        # s is an empty string "" after removing non-alphanumeric characters.
+        # Since an empty string reads the same forward and backward, it is a palindrome.
+        assert expected == result
     
