@@ -7,3 +7,10 @@ class TestValidPalindrome:
         result = sol.max_profit(prices)
         expected = 5
         assert result is expected
+    
+    def test_Max_0Profit(self):   
+        sol = Solution()
+        prices = [7,6,4,3,1]
+        result = sol.max_profit(prices)
+        expected = 0
+        assert result is expected
