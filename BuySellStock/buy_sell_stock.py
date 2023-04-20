@@ -14,5 +14,16 @@ class Solution(object):
         : type prices: List[int]
         : rtype: int
         """
-        profit = 0
-        return profit
+        maxProfit = 0
+        l_ptr = 0
+        r_ptr = 1
+        while r_ptr <= len(prices) - 1:
+            if prices[r_ptr] < prices[l_ptr]:
+                l_ptr = r_ptr
+            elif maxProfit < prices[r_ptr] - prices[l_ptr]:
+                maxProfit = prices[r_ptr] - prices[l_ptr]
+            r_ptr = r_ptr + 1
+
+        return maxProfit
+
+
