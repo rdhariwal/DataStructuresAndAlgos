@@ -1,4 +1,5 @@
-# Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+# Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', 
+# determine if the input string is valid.
 
 # An input string is valid if:
 
@@ -30,7 +31,7 @@ class Solution:
                 open.append(char)
             elif len(open) > 0:
                 li = open.pop()
-                if (li == "[" and char == "]") or (li == "(" and char == ")") or (li == "{" and char == "}"):  # noqa: E501
+                if (li == "[" and char == "]") or (li == "(" and char == ")")  or (li == "{" and char == "}"):   # noqa: E501
                     continue
                 else:
                     is_valid = False
@@ -42,7 +43,7 @@ class Solution:
                 break
         
         # account for any unclosed brackets
-        if len(open) == 0 and cb_exception == False:
+        if len(open) == 0 and cb_exception is False:
             is_valid = True
 
         return is_valid
