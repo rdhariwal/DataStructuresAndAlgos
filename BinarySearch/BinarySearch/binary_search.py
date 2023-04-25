@@ -26,7 +26,17 @@
 #     -104 < nums[i], target < 104
 #     All the integers in nums are unique.
 #     nums is sorted in ascending order.
+import math
 class Solution:
     def binary_search(self, nums: list[int], target: int) -> int:
-        index = -1
-        return index
+        lptr = 0
+        rptr = len(nums) - 1
+        while(lptr <= rptr):
+            pivot = lptr + ((rptr - 1) // 2)
+            if(nums[pivot] < target):
+                lptr = pivot + 1
+            elif nums[pivot] > target:
+                rptr = pivot - 1
+            else:
+                return pivot
+        return -1
